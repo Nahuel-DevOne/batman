@@ -2,15 +2,15 @@
 /** Agrega seguridad al código, evitando el acceso a las funciones desde afuera */
 const llamadoAyuda = (() => {
     "use strict";
-
+    
     /** Variables */
     let linternaApagada = true;
+    
     /** Selectores */
     const sonidoBatman = document.querySelector('#bati_encendido');
     const sonidoBoton = document.querySelector('#bati_click');
     const batman = document.querySelector('#batman');
-    const batmanBoton = document.querySelector('#bati_boton');
-    
+
     /** Funciones */
     const controlarLinterna = () => {
         if (linternaApagada) {
@@ -42,13 +42,8 @@ const llamadoAyuda = (() => {
         controlarLinterna();
         sonidoLinterna();
     }
-
-    /** Eventos */
-    // batman.addEventListener('click', () => {
-    //     controlarLinterna();
-    //     sonidoLinterna();
-    // })
     
+    // Público
     return {
         inicializarAuxilio: aplicarFunciones
     }
