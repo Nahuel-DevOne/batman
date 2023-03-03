@@ -8,18 +8,29 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <h1>codo a codo</h1>
-    <section class="container">
-        <div id="batman" class="batman">
-            <div id="bati_boton" class="bati_boton">
-
+    <main class="container">
+        <h1>Codo a Codo con Batman</h1>
+        <h2>Toca a Batman para pedir ayuda</h2>
+        <section>
+            <div id="batman" class="batman">
+                <div id="bati_boton" class="bati_boton">
+    
+                </div>
             </div>
-        </div>
+        </section>
+    </main>
+
+    <section class="container">
+        <audio hidden id="bati_encendido" src="./sound/batiEncendido.mp3" type="audio/mpeg" controls></audio>
+        <audio hidden id="bati_click" src="./sound/batiClick.mp3" type="audio/mpeg"></audio>
     </section>
 
-    <audio id="bati_encendido" src="./sound/batiEncendido.mp3" type="audio/mpeg" controls></audio>
-    <audio id="bati_click" src="./sound/batiClick.mp3" type="audio/mpeg"></audio>
-
     <script src="js/index.js"></script>
+
+    <script>
+        document.querySelector('#batman').addEventListener('click', () => {
+            llamadoAyuda.inicializarAuxilio()
+        })
+    </script>
 </body>
 </html>

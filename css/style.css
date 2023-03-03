@@ -5,7 +5,23 @@
 }
 
 body{
-    background-color: lightblue;
+    background-color: rgb(159, 163, 164);
+}
+
+h1{
+    margin: 1rem 0 0.5rem 0;
+    color: rgb(250, 212, 0);
+}
+
+h2{
+    color: #5b5b5b;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .batman{
@@ -22,6 +38,8 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     background-image: url(../img/batmanOFF.jpg);
+    cursor: pointer;
+    margin-top: 1rem;
 }
 
 .batman_activo{
@@ -29,7 +47,7 @@ body{
 }
 
 .bati_boton{
-    margin: 291px auto 0;
+    margin: 288px auto 0;
     width: 30px;
     height: 50px;
     border: 1px solid red;
