@@ -6,32 +6,34 @@ const sonidoBoton = document.querySelector('#bati_click');
 const batman = document.querySelector('#batman');
 const batmanBoton = document.querySelector('#bati_boton');
 
-// Funciones
+/** Funciones */
 const controlarLinterna = () => {
     if (linternaApagada) {
+        // se enciende la luz
         linternaApagada = false;
-        // sonido
         batman.classList.add('batman_activo');
 
     } else {
+        // se apaga la luz
         linternaApagada = true;
-        //sonido
         batman.classList.remove('batman_activo');
     }
 }
 
 const sonidoLinterna = () => {
     if (sonidoBatman.paused) {
+        // se enciende la batiseñal
         sonidoBoton.play();
         sonidoBatman.play();
     } else {
+        // se apaga la batiseñal
         sonidoBoton.play();
         sonidoBatman.pause();
         sonidoBatman.currentTime=0;
     }
 }
 
-// eventos
+/** Eventos */
 batman.addEventListener('click', () => {
     controlarLinterna();
     sonidoLinterna();
