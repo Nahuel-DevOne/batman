@@ -13,25 +13,18 @@ const llamadoAyuda = (() => {
 
     /** Funciones */
     const controlarLinterna = () => {
-        if (linternaApagada) {
-            // se enciende la luz
-            linternaApagada = false;
-            batman.classList.add('batman_activo');
-    
-        } else {
-            // se apaga la luz
-            linternaApagada = true;
-            batman.classList.remove('batman_activo');
-        }
+        linternaApagada 
+            ? (linternaApagada = false, batman.classList.add('batman_activo')) // se enciende la luz
+            : (linternaApagada = true, batman.classList.remove('batman_activo')) // se apaga la luz
     }
     
     const sonidoLinterna = () => {
         if (sonidoBatman.paused) {
-            // se enciende la batiseñal
+            // se hace el sonido de click y se enciende la batiseñal
             sonidoBoton.play();
             sonidoBatman.play();
         } else {
-            // se apaga la batiseñal
+            // se hace el sonido de click y se apaga la batiseñal
             sonidoBoton.play();
             sonidoBatman.pause();
             sonidoBatman.currentTime=0;
